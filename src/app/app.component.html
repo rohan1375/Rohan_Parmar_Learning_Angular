@@ -1,4 +1,11 @@
-<h1>Hello, {{ title }}</h1>
-<h2> {{ school }}</h2>
-<h3> {{ section }}</h3>
+<div class="container">
+  <h2>Marvel Comic Hero's List</h2>
+  <div *ngFor="let MarvelComics of MarvelComicslist" class="user-card">
+  <h3>{{MarvelComics.weapons}}</h3>
+  <p>CharacterName:{{MarvelComics.CharacterName}} </p>
+  <p>power:{{MarvelComics.power}}</p>
+  <p>Age:{{MarvelComics.age}}</p>
+  <p>fly:{{MarvelComics.iscanfly ? 'true': 'false'}}</p>
+  </div>
+</div>
 
