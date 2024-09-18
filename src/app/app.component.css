@@ -2,33 +2,44 @@
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #f0f0f0;
+  background-color: #f4f4f4; /* Light gray to represent comic panels */
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 h2 {
   text-align: center;
-  color: #333;
+  color: #d32f2f; /* Marvel red */
   margin-bottom: 20px;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  border-bottom: 2px solid #d32f2f;
+  padding-bottom: 10px;
 }
 .user-card {
   background-color: #fff;
   padding: 15px;
   margin-bottom: 15px;
   border-radius: 5px;
+  border-left: 6px solid #d32f2f; /* Red Marvel accent */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .user-card h3 {
   margin: 0;
-  color: #007bff;
+  color: #1976d2; /* Marvel blue */
+  font-size: 1.6em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 .user-card p {
   margin: 5px 0;
-  color: #555;
+  color: #333; /* Dark text for readability */
 }
 .user-card p:first-child {
-  margin-top: 10px;
+  font-weight: bold;
+  color: #d32f2f; /* Marvel red */
 }
 .user-card p:last-child {
-  margin-bottom: 0;
+  font-style: italic;
+  color: #1976d2; /* Marvel blue */
 }
