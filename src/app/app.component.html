@@ -1,11 +1,12 @@
 <div class="container">
   <h2>Marvel Comic Hero's List</h2>
   <div *ngFor="let MarvelComics of MarvelComicslist" class="user-card">
-  <h3>{{MarvelComics.weapons}}</h3>
-  <p>CharacterName:{{MarvelComics.CharacterName}} </p>
-  <p>power:{{MarvelComics.power}}</p>
-  <p>Age:{{MarvelComics.age}}</p>
-  <p>fly:{{MarvelComics.iscanfly ? 'true': 'false'}}</p>
+  <h3>{{MarvelComics.CharacterName}}</h3>
+  <p>Weapon used: {{MarvelComics.weapons}} </p>
+  <p>Power: {{MarvelComics.power}}</p>
+  <p>Age: {{MarvelComics.age}}</p>
+  <p *ngIf="MarvelComics .iscanfly==true">Can {{MarvelComics.CharacterName}} fly:-Yes</p>
+      <p *ngIf="MarvelComics .iscanfly!=true">Can {{MarvelComics.CharacterName}} fly:-No</p>
   </div>
 </div>
 
