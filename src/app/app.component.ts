@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {JsonPipe, NgForOf} from "@angular/common";
 import {User} from "./Shared/Model/User";
+import {MarvelHeroListComponent} from "./marvel-hero-list/marvel-hero-list.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,NgForOf,JsonPipe],
+  imports: [RouterOutlet, NgForOf, JsonPipe, MarvelHeroListComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

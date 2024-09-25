@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
   selector: 'app-marvel-hero-list-item',
@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './marvel-hero-list-item.component.css'
 })
 export class MarvelHeroListItemComponent {
-
+@Input() MarvelComics:any;
 }
