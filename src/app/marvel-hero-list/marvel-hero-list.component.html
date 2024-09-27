@@ -1,11 +1,12 @@
-<div class="container">
-    <h2>Marvel Comic Hero's List</h2>
-    <div *ngFor="let MarvelComics of MarvelComicslist" class="user-card">
-        <h3>{{MarvelComics.CharacterName}}</h3>
-        <p>Weapon used: {{MarvelComics.weapons}} </p>
-        <p>Power: {{MarvelComics.power}}</p>
-        <p>Age: {{MarvelComics.age}}</p>
-        <p *ngIf="MarvelComics .iscanfly==true">Can {{MarvelComics.CharacterName}} fly:-Yes</p>
-        <p *ngIf="MarvelComics .iscanfly!=true">Can {{MarvelComics.CharacterName}} fly:-No</p>
-    </div>
-</div>
+<body>
+<table>
+    <tbody>
+    <tr *ngFor="let MarvelComics of MarvelComicslist; let i= index">
+
+        <td colspan ="5">
+            <app-marvel-hero-list-item [MarvelComics]="MarvelComics" [ngClass]="{'even-item':i%2==0,'odd-item':i%2!=0 }"></app-marvel-hero-list-item>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>

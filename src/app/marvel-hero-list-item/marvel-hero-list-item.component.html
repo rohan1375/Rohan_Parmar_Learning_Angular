@@ -1,1 +1,9 @@
-<p>marvel-hero-list-item works!</p>
+<h2>Marvel Comic Hero's List</h2>
+    <div *ngIf="MarvelComics" class="user-card">
+        <h3>{{MarvelComics.CharacterName}}</h3>
+        <p>Weapon used: {{MarvelComics.weapons}} </p>
+        <p>Power: {{MarvelComics.power}}</p>
+        <p>Age: {{MarvelComics.age}}</p>
+        <p *ngIf="MarvelComics .iscanfly==true">Can {{MarvelComics.CharacterName}} fly:-Yes</p>
+        <p *ngIf="MarvelComics .iscanfly!=true">Can {{MarvelComics.CharacterName}} fly:-No</p>
+    </div>

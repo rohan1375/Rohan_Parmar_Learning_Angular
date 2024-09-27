@@ -43,3 +43,8 @@ h2 {
   font-style: italic;
   color: #1976d2; /* Marvel blue */
 }
+h1{
+  text-align: center;
+  color: red;
+}
+
