@@ -16,6 +16,7 @@ import {UserService} from "../Services/user.service";
   styleUrl: './marvel-hero-list.component.css'
 })
 export class MarvelHeroListComponent{
+  displayColumns:string[] = ['CharacterName', 'power', 'weapons', 'age', 'iscanfly']
   MarvelComics:User[]=[];
 
   constructor(private userService:UserService) {
