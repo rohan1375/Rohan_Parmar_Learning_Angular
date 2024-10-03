@@ -1,12 +1,25 @@
-<body>
-<table>
-    <tbody>
-    <tr *ngFor="let MarvelComics of MarvelComicslist; let i= index">
+<div class="container">
+  <h2>Student List</h2>
+  <table>
+    <thead>
+    <tr>
+      <th>CharacterName</th>
+      <th>weapons</th>
+      <th>age</th>
+      <th>iscanfly</th>
+      <th>power</th>
+    </tr>
+    </thead>
 
-        <td colspan ="5">
-            <app-marvel-hero-list-item [MarvelComics]="MarvelComics" [ngClass]="{'even-item':i%2==0,'odd-item':i%2!=0 }"></app-marvel-hero-list-item>
-        </td>
+    <tbody>
+    <tr *ngFor="let MarvelComics of MarvelComics;" (click)="selectUser(MarvelComics)">
+      <td>{{MarvelComics.CharacterName}}</td>
+      <td>{{MarvelComics.weapons}}</td>
+      <td>{{MarvelComics.age}}</td>
+      <td>{{MarvelComics.iscanfly?'Yes':'No'}}</td>
+      <td>{{MarvelComics.power}}</td>
     </tr>
     </tbody>
 </table>
-</body>
+  <app-marvel-hero-list-item [MarvelComics]= "selectedUser"></app-marvel-hero-list-item>
+</div>
