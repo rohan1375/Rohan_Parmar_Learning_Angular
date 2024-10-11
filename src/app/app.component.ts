@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {RouterLink, RouterLinkActive, RouterOutlet} from '@angular/router';
 import {JsonPipe, NgForOf} from "@angular/common";
 import {User} from "./Shared/Model/User";
 import {MarvelHeroListComponent} from "./marvel-hero-list/marvel-hero-list.component";
@@ -9,7 +9,7 @@ import {UserService} from "./Services/user.service";
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NgForOf, JsonPipe, MarvelHeroListComponent, MarvelHeroListItemComponent],
+  imports: [RouterOutlet, NgForOf, JsonPipe, MarvelHeroListComponent, MarvelHeroListItemComponent, RouterLink, RouterLinkActive],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

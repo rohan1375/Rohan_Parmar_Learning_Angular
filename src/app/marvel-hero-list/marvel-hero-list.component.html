@@ -8,6 +8,7 @@
       <th>age</th>
       <th>iscanfly</th>
       <th>power</th>
+      <th>photos</th>
     </tr>
     </thead>
 
@@ -18,6 +19,7 @@
       <td>{{MarvelComics.age}}</td>
       <td>{{MarvelComics.iscanfly?'Yes':'No'}}</td>
       <td>{{MarvelComics.power}}</td>
+      <td><img [src]="MarvelComics.photos"></td>
     </tr>
     </tbody>
 </table>

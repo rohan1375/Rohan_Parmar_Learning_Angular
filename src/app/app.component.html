@@ -1,3 +1,12 @@
-<h1>{{ title}}</h1>
-<app-marvel-hero-list-item></app-marvel-hero-list-item>
-<app-marvel-hero-list></app-marvel-hero-list>
+<div class="nav-bar">
+  <nav>
+    <a routerLink="/MarvelComics" routerLinkActive="active">List</a>
+    <a routerLink="/modify-list-item" routerLinkActive="active">Modify-List</a>
+  </nav>
+
+</div>
+<div class="container">
+  <h1>{{title}}</h1>
+  <router-outlet></router-outlet>
+
+</div>

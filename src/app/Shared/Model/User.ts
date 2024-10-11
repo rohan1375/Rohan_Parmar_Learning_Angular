@@ -4,5 +4,6 @@ export interface User {
   weapons: string;
   age: number;
   iscanfly?: boolean;
+  photos: string;
 
 }
