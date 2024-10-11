@@ -1,5 +1,5 @@
 <div class="container">
-  <h2>Student List</h2>
+  <h2>Marvel Comics List</h2>
   <table>
     <thead>
     <tr>
@@ -13,7 +13,7 @@
     </thead>
 
     <tbody>
-    <tr *ngFor="let MarvelComics of MarvelComics;" (click)="selectUser(MarvelComics)">
+    <tr *ngFor="let MarvelComics of MarvelComics;">
       <td>{{MarvelComics.CharacterName}}</td>
       <td>{{MarvelComics.weapons}}</td>
       <td>{{MarvelComics.age}}</td>
@@ -23,5 +23,5 @@
     </tr>
     </tbody>
 </table>
-  <app-marvel-hero-list-item [MarvelComics]= "selectedUser"></app-marvel-hero-list-item>
+  <app-marvel-hero-list-item></app-marvel-hero-list-item>
 </div>
