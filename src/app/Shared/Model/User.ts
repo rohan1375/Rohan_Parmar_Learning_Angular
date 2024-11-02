@@ -5,5 +5,6 @@ export interface User {
   age: number;
   iscanfly?: boolean;
   photos: string;
+  id:number;
 
 }

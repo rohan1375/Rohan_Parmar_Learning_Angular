@@ -1,27 +1,13 @@
 <div class="container">
   <h2>Marvel Comics List</h2>
-  <table>
-    <thead>
-    <tr>
-      <th>CharacterName</th>
-      <th>weapons</th>
-      <th>age</th>
-      <th>iscanfly</th>
-      <th>power</th>
-      <th>photos</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    <tr *ngFor="let MarvelComics of MarvelComics;">
-      <td>{{MarvelComics.CharacterName}}</td>
-      <td>{{MarvelComics.weapons}}</td>
-      <td>{{MarvelComics.age}}</td>
-      <td>{{MarvelComics.iscanfly?'Yes':'No'}}</td>
-      <td>{{MarvelComics.power}}</td>
-      <td><img [src]="MarvelComics.photos"></td>
-    </tr>
-    </tbody>
-</table>
-  <app-marvel-hero-list-item></app-marvel-hero-list-item>
+    <div class="user" *ngFor="let MarvelComics of MarvelComics;">
+      <p>Id:{{MarvelComics.id}}</p>
+      <p>{{MarvelComics.CharacterName}}<p>
+      <p>{{MarvelComics.weapons}}</p>
+      <p>{{MarvelComics.age}}</p>
+      <p>{{MarvelComics.iscanfly?'Yes':'No'}}</p>
+      <p>{{MarvelComics.power}}</p>
+      <button type="button" (click)="delete(MarvelComics.id)">Delete</button>
+      <button type="button" (click)="edit()">Edit</button>
+      </div>
 </div>

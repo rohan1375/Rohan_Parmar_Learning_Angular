@@ -3,7 +3,7 @@ import {User} from "../Shared/Model/User";
 import {MarvelHeroListItemComponent} from "../marvel-hero-list-item/marvel-hero-list-item.component";
 import {NgClass, NgForOf, NgIf} from "@angular/common";
 import {UserService} from "../Services/user.service";
-
+import {Router} from "@angular/router";
 @Component({
   selector: 'app-marvel-hero-list',
   standalone: true,
@@ -16,12 +16,11 @@ import {UserService} from "../Services/user.service";
   templateUrl: './marvel-hero-list.component.html',
   styleUrl: './marvel-hero-list.component.css'
 })
-export class MarvelHeroListComponent implements OnInit {
-  displayColumns:string[] = ['CharacterName', 'power', 'weapons', 'age', 'iscanfly']
+export class MarvelHeroListComponent {
   MarvelComics:User[]=[];
 
 
-  constructor(private userService:UserService) {
+  constructor(private userService:UserService,private router:Router) {
   }
   ngOnInit() {
     this.userService.getUsers().subscribe({
@@ -30,10 +29,12 @@ export class MarvelHeroListComponent implements OnInit {
       complete:() => console.log("data fetched"),
     })
   }
-  selectedUser?:User;
-  selectUser(user:User):void {
-    this.selectedUser = user;
+ delete(id:Number):void{
+    this.MarvelComics=this.MarvelComics.filter(user => user.id === id);
   }
-
+edit(): void {
+    this.router.navigate(['modify-list-item'])
+}
 
 }
+
