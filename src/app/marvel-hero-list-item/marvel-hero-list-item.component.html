@@ -1,9 +1,10 @@
 
     <div *ngIf="MarvelComics" class="user-card">
+      <h2>{{MarvelComics.id}}</h2>
         <h3>{{MarvelComics.CharacterName}}</h3>
         <p>Weapon used: {{MarvelComics.weapons}} </p>
         <p>Power: {{MarvelComics.power}}</p>
-        <p>Age: {{MarvelComics.age}}</p>
-        <p *ngIf="MarvelComics .iscanfly==true">Can {{MarvelComics.CharacterName}} fly:-Yes</p>
-        <p *ngIf="MarvelComics .iscanfly!=true">Can {{MarvelComics.CharacterName}} fly:-No</p>
+        <p>Age: {{MarvelComics.age}}
+        <img [src]="MarvelComics.photos" width="100" height="100" alt="">
+        </p>
     </div>

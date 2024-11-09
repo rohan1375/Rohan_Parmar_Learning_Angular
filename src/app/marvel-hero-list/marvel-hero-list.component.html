@@ -10,4 +10,5 @@
       <button type="button" (click)="delete(MarvelComics.id)">Delete</button>
       <button type="button" (click)="edit()">Edit</button>
       </div>
+  <div *ngIf="error" class="error">{{error}}</div>
 </div>
