@@ -28,11 +28,11 @@ export class ModifyListItemComponent implements OnInit {
   ) {
     this.userForm = this.fb.group({
       id:[userService.generateNewId()],
-      CharacterName:['',Validators.required],
-      power: ['',Validators.required],
-      weapons: ['',Validators.required],
-      age: ['',Validators.required],
-      photos: ['',Validators.required],
+      CharacterName:[''],
+      power: [''],
+      weapons: [''],
+      age: [''],
+      photos: [''],
       iscanfly:[false]
     });
   }
