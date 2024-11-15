@@ -4,18 +4,18 @@ import {MarvelHeroListItemComponent} from "../marvel-hero-list-item/marvel-hero-
 import {CurrencyPipe, NgClass, NgForOf, NgIf, TitleCasePipe, UpperCasePipe} from "@angular/common";
 import {UserService} from "../Services/user.service";
 import {Router, RouterLink} from "@angular/router";
+
+import {CharacterPowerPipe} from "../pipes/charactername-power.pipe";
 @Component({
   selector: 'app-marvel-hero-list',
   standalone: true,
   imports: [
-    MarvelHeroListItemComponent,
-    NgClass,
     NgForOf,
-    NgIf,
     TitleCasePipe,
     UpperCasePipe,
     CurrencyPipe,
-    RouterLink
+    RouterLink,
+    CharacterPowerPipe
   ],
   templateUrl: './marvel-hero-list.component.html',
   styleUrl: './marvel-hero-list.component.css'

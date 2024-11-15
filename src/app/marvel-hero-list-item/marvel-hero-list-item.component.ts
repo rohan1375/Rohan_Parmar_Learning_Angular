@@ -3,6 +3,7 @@ import {User} from"../Shared/Model/User";
 import {CurrencyPipe, NgForOf, NgIf, TitleCasePipe, UpperCasePipe} from "@angular/common";
 import {ActivatedRoute, Router} from "@angular/router";
 import {UserService} from "../Services/user.service";
+import {CharacterPowerPipe} from "../pipes/charactername-power.pipe";
 @Component({
   selector: 'app-marvel-hero-list-item',
   standalone: true,
@@ -11,7 +12,8 @@ import {UserService} from "../Services/user.service";
     NgIf,
     CurrencyPipe,
     TitleCasePipe,
-    UpperCasePipe
+    UpperCasePipe,
+    CharacterPowerPipe
   ],
   templateUrl: './marvel-hero-list-item.component.html',
   styleUrl: './marvel-hero-list-item.component.css'

@@ -1,9 +1,8 @@
 
     <div *ngIf="MarvelComics" class="user-card">
-        <p>CharacterName: {{MarvelComics.CharacterName | titlecase}}<p>
+        <p>CharacterName with power: {{MarvelComics.CharacterName |titlecase}}<p>
         <p>Id:{{MarvelComics.id}}</p>
         <p>weapons: {{MarvelComics.weapons | uppercase}}</p>
-        <p>Power: {{MarvelComics.power}}</p>
         <p>Age: {{MarvelComics.age}}</p>
         <p>Price: {{MarvelComics.price | currency:'CAD'}}</p>
         <p *ngIf="MarvelComics .iscanfly==true">Can {{MarvelComics.CharacterName}} fly:-Yes</p>

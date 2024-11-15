@@ -2,11 +2,10 @@
   <h2>Marvel Comics List</h2>
     <div class="user" *ngFor="let MarvelComics of MarvelComics" [routerLink]="['/MarvelComics', MarvelComics.id]" >
       <p>Id:{{MarvelComics.id}}</p>
-      <p>CharacterName: {{MarvelComics.CharacterName | titlecase}}<p>
+      <p>CharacterName with Power: {{MarvelComics | characterPower | titlecase}}<p>
       <p>weapons: {{MarvelComics.weapons | uppercase}}</p>
       <p>age: {{MarvelComics.age}}</p>
       <p>Can They Fly: {{MarvelComics.iscanfly?'Yes':'No'}}</p>
-      <p>Power: {{MarvelComics.power}}</p>
       <p>Price: {{MarvelComics.price | currency:'CAD'}}</p>
       <button type="button" (click)="delete(MarvelComics.id)">Delete</button>
       <button type="button" (click)="edit()">Edit</button>
