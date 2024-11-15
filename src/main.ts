@@ -10,9 +10,15 @@ import {ModifyListItemComponent} from "./app/modify-list-item/modify-list-item.c
 const routes: Routes = [
   {path:'', redirectTo: '/MarvelComics', pathMatch: 'full'},
   { path: 'MarvelComics', component: MarvelHeroListComponent },
-  { path: 'MarvelComics/:id', component: MarvelHeroListItemComponent },
-  {path:'modify-list-item', component: ModifyListItemComponent},
-  {path: '**', component:PageNotFoundComponent}
+  { path: 'MarvelComics/:id',
+  loadComponent: ()=>
+  import('./app/marvel-hero-list/marvel-hero-list.component').then(m => m.MarvelHeroListComponent)},
+  {path:'modify-list-item',
+  loadComponent: () =>
+  import('./app/modify-list-item/modify-list-item.component').then(m => m.ModifyListItemComponent)},
+  {path: '**',
+  loadComponent:() =>
+  import('./app/page-not-found/page-not-found.component').then(m=>m.PageNotFoundComponent)},
 ]
 
 bootstrapApplication(AppComponent,{ providers:[provideRouter(routes)]})
