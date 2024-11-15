@@ -1,9 +1,9 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {User} from "../Shared/Model/User";
 import {MarvelHeroListItemComponent} from "../marvel-hero-list-item/marvel-hero-list-item.component";
-import {NgClass, NgForOf, NgIf} from "@angular/common";
+import {CurrencyPipe, NgClass, NgForOf, NgIf, TitleCasePipe, UpperCasePipe} from "@angular/common";
 import {UserService} from "../Services/user.service";
-import {Router} from "@angular/router";
+import {Router, RouterLink} from "@angular/router";
 @Component({
   selector: 'app-marvel-hero-list',
   standalone: true,
@@ -11,7 +11,11 @@ import {Router} from "@angular/router";
     MarvelHeroListItemComponent,
     NgClass,
     NgForOf,
-    NgIf
+    NgIf,
+    TitleCasePipe,
+    UpperCasePipe,
+    CurrencyPipe,
+    RouterLink
   ],
   templateUrl: './marvel-hero-list.component.html',
   styleUrl: './marvel-hero-list.component.css'

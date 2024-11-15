@@ -10,7 +10,7 @@ import {ModifyListItemComponent} from "./app/modify-list-item/modify-list-item.c
 const routes: Routes = [
   {path:'', redirectTo: '/MarvelComics', pathMatch: 'full'},
   { path: 'MarvelComics', component: MarvelHeroListComponent },
-  { path: 'MarvelComics/:CharacterName', component: MarvelHeroListItemComponent },
+  { path: 'MarvelComics/:id', component: MarvelHeroListItemComponent },
   {path:'modify-list-item', component: ModifyListItemComponent},
   {path: '**', component:PageNotFoundComponent}
 ]
