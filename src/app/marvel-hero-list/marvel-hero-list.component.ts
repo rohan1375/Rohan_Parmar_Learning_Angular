@@ -6,6 +6,7 @@ import {UserService} from "../Services/user.service";
 import {Router, RouterLink} from "@angular/router";
 
 import {CharacterPowerPipe} from "../pipes/charactername-power.pipe";
+import {HoverHighlightDirective} from "../directives/hover-highlight.directive";
 @Component({
   selector: 'app-marvel-hero-list',
   standalone: true,
@@ -15,7 +16,8 @@ import {CharacterPowerPipe} from "../pipes/charactername-power.pipe";
     UpperCasePipe,
     CurrencyPipe,
     RouterLink,
-    CharacterPowerPipe
+    CharacterPowerPipe,
+    HoverHighlightDirective
   ],
   templateUrl: './marvel-hero-list.component.html',
   styleUrl: './marvel-hero-list.component.css'

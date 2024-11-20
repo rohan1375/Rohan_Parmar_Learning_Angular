@@ -1,6 +1,6 @@
 <div class="container">
   <h2>Marvel Comics List</h2>
-    <div class="user" *ngFor="let MarvelComics of MarvelComics" [routerLink]="['/MarvelComics', MarvelComics.id]" >
+    <div class="user" *ngFor="let MarvelComics of MarvelComics" [routerLink]="['/MarvelComics', MarvelComics.id]"[appHoverHighlight]="'red'">
       <p>Id:{{MarvelComics.id}}</p>
       <p>CharacterName with Power: {{MarvelComics | characterPower | titlecase}}<p>
       <p>weapons: {{MarvelComics.weapons | uppercase}}</p>
