@@ -2,32 +2,32 @@
 
   <div class="form-group">
     <label for="id">ID</label>
-    <input type="number" id="id" formControlName="id" />
+    <input type="number" id="id" formControlName="id"[appHighlightOnFocus]="'silver'" />
   </div>
 
   <div class="form-group">
     <label for="CharacterName">CharacterName</label>
-    <input type="text" id="CharacterName" formControlName="CharacterName" />
+    <input type="text" id="CharacterName" formControlName="CharacterName"[appHighlightOnFocus]="'silver'" />
   </div>
 
   <div class="form-group">
     <label for="power">power</label>
-    <input type="text" id="power" formControlName="power" />
+    <input type="text" id="power" formControlName="power"[appHighlightOnFocus]="'silver'" />
   </div>
 
   <div class="form-group">
     <label for="weapons">weapons</label>
-    <input type="text" id="weapons" formControlName="weapons" />
+    <input type="text" id="weapons" formControlName="weapons" [appHighlightOnFocus]="'silver'" />
   </div>
 
   <div class="form-group">
     <label for="age">age</label>
-    <input type="number" id="age" formControlName="age" />
+    <input type="number" id="age" formControlName="age" [appHighlightOnFocus]="'silver'"/>
   </div>
 
   <div class="form-group">
     <label for="iscanfly">iscanfly</label>
-    <input type="checkbox" id="iscanfly" formControlName="iscanfly" />
+    <input type="checkbox" id="iscanfly" formControlName="iscanfly"  />
   </div>
 
   <button type="submit">Submit</button>
