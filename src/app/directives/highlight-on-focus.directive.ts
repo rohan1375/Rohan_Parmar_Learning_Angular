@@ -11,15 +11,15 @@ export class HighlightOnFocusDirective {
   constructor(private el: ElementRef) {
   }
 
-  @HostListener('mouseenter') onMouseEnter() {
-    this.highlight(this.appHighlightOnFocus || 'silver'); //Default colour just incase
+  @HostListener('focus') onfocus() {
+    this.focus(this.appHighlightOnFocus || 'silver'); //Default colour just incase
   }
 
-  @HostListener('mouseleave') onMouseLeave() {
-    this.highlight('');
+  @HostListener('blur') blur() {
+    this.focus('');
   }
 
-  private highlight(color: string) {
+  private focus(color: string) {
     this.el.nativeElement.style.backgroundColor = color;
   }
 }
