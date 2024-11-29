@@ -1,34 +1,41 @@
-<form [formGroup]="userForm"(ngSubmit)="onSubmit()">
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="mat-form">
 
-  <div class="form-group">
-    <label for="id">ID</label>
-    <input type="number" id="id" formControlName="id"[appHighlightOnFocus]="'silver'" />
-  </div>
 
-  <div class="form-group">
-    <label for="CharacterName">CharacterName</label>
-    <input type="text" id="CharacterName" formControlName="CharacterName" [appHighlightOnFocus]="'silver'" />
-  </div>
+  <mat-form-field appearance="outline" class="form-field" >
+    <mat-label>ID</mat-label>
+    <input matInput type="number" formControlName="id" [appHighlightOnFocus]="'silver'" />
+  </mat-form-field>
 
-  <div class="form-group">
-    <label for="power">power</label>
-    <input type="text" id="power" formControlName="power" [appHighlightOnFocus]="'silver'" />
-  </div>
+  <mat-form-field appearance="outline" class="form-field" >
+    <mat-label>CharacterName</mat-label>
+    <input matInput type="text" formControlName="CharacterName" [appHighlightOnFocus]="'silver'" />
+  </mat-form-field>
 
-  <div class="form-group">
-    <label for="weapons">weapons</label>
-    <input type="text" id="weapons" formControlName="weapons" [appHighlightOnFocus]="'silver'" />
-  </div>
+
+  <mat-form-field appearance="outline" class="form-field" >
+    <mat-label>power</mat-label>
+    <input matInput type="text" formControlName="power" [appHighlightOnFocus]="'silver'" />
+  </mat-form-field>
+
+
+  <mat-form-field appearance="outline" class="form-field" >
+    <mat-label>weapons</mat-label>
+    <input matInput type="text" formControlName="weapons" [appHighlightOnFocus]="'silver'" />
+  </mat-form-field>
 
   <div class="form-group">
     <label for="age">age</label>
     <input type="number" id="age" formControlName="age" [appHighlightOnFocus]="'silver'"/>
   </div>
+  <mat-form-field appearance="outline" class="form-field" >
+    <mat-label>age</mat-label>
+    <input matInput type="text" formControlName="age" [appHighlightOnFocus]="'silver'" />
+  </mat-form-field>
 
-  <div class="form-group">
-    <label for="iscanfly">iscanfly</label>
-    <input type="checkbox" id="iscanfly" formControlName="iscanfly"  />
-  </div>
+  <mat-form-field appearance="outline" class="form-field" >
+    <mat-label>iscanfly</mat-label>
+    <input matInput type="text" formControlName="iscanfly" [appHighlightOnFocus]="'silver'" />
+  </mat-form-field>
 
-  <button type="submit">Submit</button>
+  <button mat-raised-button color="primary" type="submit" >Submit</button>
 </form>

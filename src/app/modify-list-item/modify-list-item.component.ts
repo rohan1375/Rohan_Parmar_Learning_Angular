@@ -4,13 +4,17 @@ import {User} from "../Shared/Model/User";
 import {UserService} from "../Services/user.service";
 import {ActivatedRoute, Router} from "@angular/router";
 import {HighlightOnFocusDirective} from "../directives/highlight-on-focus.directive";
+import {MatInputModule} from "@angular/material/input";
+import {MatButtonModule} from "@angular/material/button";
 
 @Component({
   selector: 'app-modify-list-item',
   standalone: true,
   imports: [
     ReactiveFormsModule,
-    HighlightOnFocusDirective
+    HighlightOnFocusDirective,
+    MatInputModule,
+    MatButtonModule
   ],
   templateUrl: './modify-list-item.component.html',
   styleUrl: './modify-list-item.component.css'

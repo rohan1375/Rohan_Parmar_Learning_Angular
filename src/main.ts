@@ -6,6 +6,12 @@ import {MarvelHeroListComponent} from "./app/marvel-hero-list/marvel-hero-list.c
 import {MarvelHeroListItemComponent} from "./app/marvel-hero-list-item/marvel-hero-list-item.component";
 import {PageNotFoundComponent} from "./app/page-not-found/page-not-found.component";
 import {ModifyListItemComponent} from "./app/modify-list-item/modify-list-item.component";
+import {MatIconModule} from "@angular/material/icon";
+import {MatButtonModule} from "@angular/material/button";
+import {provideHttpClient} from "@angular/common/http";
+import {importProvidersFrom} from "@angular/core";
+import {provideAnimationsAsync} from "@angular/platform-browser/animations/async";
+import {MatTableModule} from "@angular/material/table";
 
 const routes: Routes = [
   {path:'', redirectTo: '/MarvelComics', pathMatch: 'full'},
@@ -21,5 +27,13 @@ const routes: Routes = [
   import('./app/page-not-found/page-not-found.component').then(m=>m.PageNotFoundComponent)},
 ]
 
-bootstrapApplication(AppComponent,{ providers:[provideRouter(routes)]})
-.then(r=>console.log('successful'));
+bootstrapApplication(AppComponent, {
+  providers: [
+    provideHttpClient(), // Ensure that HTTP interceptors are properly configured
+    provideRouter(routes),
+    provideAnimationsAsync(), // Import providers dynamically
+    MatTableModule,
+    MatButtonModule,
+    MatIconModule,
+  ],
+}).catch((err) => console.error(err));

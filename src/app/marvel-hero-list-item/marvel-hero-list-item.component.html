@@ -1,10 +1,13 @@
 
     <div *ngIf="MarvelComics" class="user-card">
-        <p>CharacterName with power: {{MarvelComics.CharacterName |titlecase}}<p>
-        <p>Id:{{MarvelComics.id}}</p>
-        <p>weapons: {{MarvelComics.weapons | uppercase}}</p>
-        <p>Age: {{MarvelComics.age}}</p>
-        <p>Price: {{MarvelComics.price | currency:'CAD'}}</p>
+      <mat-card  class="hero-card">
+        <mat-card-title> Hero List</mat-card-title>
+        <mat-card-content>CharacterName with power: {{MarvelComics.CharacterName |titlecase}}</mat-card-content>
+        <mat-card-content>Id:{{MarvelComics.id}}</mat-card-content>
+        <mat-card-content>weapons: {{MarvelComics.weapons | uppercase}}</mat-card-content>
+        <mat-card-content>Age: {{MarvelComics.age}}</mat-card-content>
+        <mat-card-content>Price: {{MarvelComics.price | currency:'CAD'}}</mat-card-content>
         <p *ngIf="MarvelComics .iscanfly==true">Can {{MarvelComics.CharacterName}} fly:-Yes</p>
         <p *ngIf="MarvelComics .iscanfly!=true">Can {{MarvelComics.CharacterName}} fly:-No</p>
+        </mat-card>
     </div>

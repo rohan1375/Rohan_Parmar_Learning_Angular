@@ -1,13 +1,13 @@
-<div class="container">
+<div class="mat-container">
   <h2>Marvel Comics List</h2>
-    <div class="user" *ngFor="let MarvelComics of MarvelComics" [routerLink]="['/MarvelComics', MarvelComics.id]"[appHoverHighlight]="'red'">
-      <p>Id:{{MarvelComics.id}}</p>
-      <p>CharacterName with Power: {{MarvelComics | characterPower | titlecase}}<p>
-      <p>weapons: {{MarvelComics.weapons | uppercase}}</p>
-      <p>age: {{MarvelComics.age}}</p>
-      <p>Can They Fly: {{MarvelComics.iscanfly?'Yes':'No'}}</p>
-      <p>Price: {{MarvelComics.price | currency:'CAD'}}</p>
-      <button type="button" (click)="delete(MarvelComics.id)">Delete</button>
-      <button type="button" (click)="edit()">Edit</button>
-      </div>
+    <mat-list class="user" *ngFor="let MarvelComics of MarvelComics" [routerLink]="['/MarvelComics', MarvelComics.id]" [appHoverHighlight]="'red'" role="list">
+      <mat-list-item>Id:{{MarvelComics.id}}</mat-list-item>
+      <mat-list-item>CharacterName with Power: {{MarvelComics | characterPower | titlecase}}</mat-list-item>
+      <mat-list-item>weapons: {{MarvelComics.weapons | uppercase}}</mat-list-item>
+      <mat-list-item>age: {{MarvelComics.age}}</mat-list-item>
+      <mat-list-item>Can They Fly: {{MarvelComics.iscanfly?'Yes':'No'}}</mat-list-item>
+      <mat-list-item>Price: {{MarvelComics.price | currency:'CAD'}}</mat-list-item>
+      <button mat-raised-button color="primary" type="button" (click)="delete(MarvelComics.id)">Delete</button>
+      <button mat-flat-button color="primary" type="button" (click)="edit()">Edit</button>
+      </mat-list>
 </div>

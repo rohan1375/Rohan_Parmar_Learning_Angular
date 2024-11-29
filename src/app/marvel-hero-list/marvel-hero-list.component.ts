@@ -7,6 +7,9 @@ import {Router, RouterLink} from "@angular/router";
 
 import {CharacterPowerPipe} from "../pipes/charactername-power.pipe";
 import {HoverHighlightDirective} from "../directives/hover-highlight.directive";
+import {MatListModule} from "@angular/material/list";
+import { MatButtonModule} from "@angular/material/button";
+import {MatButton} from "@angular/material/button";
 @Component({
   selector: 'app-marvel-hero-list',
   standalone: true,
@@ -17,12 +20,15 @@ import {HoverHighlightDirective} from "../directives/hover-highlight.directive";
     CurrencyPipe,
     RouterLink,
     CharacterPowerPipe,
-    HoverHighlightDirective
+    HoverHighlightDirective,
+    MatListModule,
+    MatButtonModule,
+
   ],
   templateUrl: './marvel-hero-list.component.html',
   styleUrl: './marvel-hero-list.component.css'
 })
-export class MarvelHeroListComponent {
+export class MarvelHeroListComponent implements OnInit{
   MarvelComics:User[]=[];
 
 

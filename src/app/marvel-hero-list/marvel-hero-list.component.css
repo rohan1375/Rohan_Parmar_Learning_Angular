@@ -1,18 +1,23 @@
-.even-item {
-  background-color: red; /* Marvel's red for even items */
-  color: white; /* Contrast with red */
-  padding: 15px;
-  border-radius: 5px;
+.mat-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
 }
 
-.odd-item {
-  background-color: black; /* Dark theme for odd items */
-  color: white; /* Text color */
-  padding: 15px;
-  border-radius: 5px;
+.mat-elevation-z8 {
+  margin-top: 1rem;
+  border-radius: 8px;
 }
 
-body {
-  background-color:Grey; /* Change this to any color you like */
-  color: white; /* Text color to contrast with the background */
+.mat-header-cell {
+  font-weight: bold;
+}
+
+.mat-row {
+  cursor: pointer;
+}
+
+.mat-error {
+  color: red;
+  font-weight: bold;
 }

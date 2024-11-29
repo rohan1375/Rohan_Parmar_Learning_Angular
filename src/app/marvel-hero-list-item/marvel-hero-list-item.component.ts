@@ -4,6 +4,7 @@ import {CurrencyPipe, NgForOf, NgIf, TitleCasePipe, UpperCasePipe} from "@angula
 import {ActivatedRoute, Router} from "@angular/router";
 import {UserService} from "../Services/user.service";
 import {CharacterPowerPipe} from "../pipes/charactername-power.pipe";
+import {MatCardModule} from "@angular/material/card";
 @Component({
   selector: 'app-marvel-hero-list-item',
   standalone: true,
@@ -13,7 +14,8 @@ import {CharacterPowerPipe} from "../pipes/charactername-power.pipe";
     CurrencyPipe,
     TitleCasePipe,
     UpperCasePipe,
-    CharacterPowerPipe
+    CharacterPowerPipe,
+    MatCardModule
   ],
   templateUrl: './marvel-hero-list-item.component.html',
   styleUrl: './marvel-hero-list-item.component.css'

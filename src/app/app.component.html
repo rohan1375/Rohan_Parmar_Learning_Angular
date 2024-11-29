@@ -1,12 +1,13 @@
-<div class="nav-bar">
-  <nav>
-    <a routerLink="/MarvelComics" routerLinkActive="active">List</a>
-    <a routerLink="/modify-list-item" routerLinkActive="active">Modify-List</a>
-  </nav>
+<mat-toolbar color="primary">
+  <span>Marvel Comics</span>
+  <span class="spacer"></span>
+  <button mat-button routerLink="/MarvelComics" routerLinkActive="active">Student List</button>
+  <button mat-button routerLink="/modify-list-item" routerLinkActive="active">Modify Student</button>
+</mat-toolbar>
 
-</div>
-<div class="container">
-  <h1>{{title}}</h1>
+<div class="app-container">
+  <h1>{{ title }}</h1>
+
+  <!--router outlet to display routed components -->
   <router-outlet></router-outlet>
-
 </div>
