@@ -1,41 +1,41 @@
 <form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="mat-form">
 
 
-  <mat-form-field appearance="outline" class="form-field" >
+  <mat-form-field appearance="outline" class="form-field" disabled>
     <mat-label>ID</mat-label>
-    <input matInput type="number" formControlName="id" [appHighlightOnFocus]="'silver'" />
+    <input matInput type="number" formControlName="id" [appHighlightOnFocus]="'silver'" matTooltip="enter your id "/>
   </mat-form-field>
 
   <mat-form-field appearance="outline" class="form-field" >
     <mat-label>CharacterName</mat-label>
-    <input matInput type="text" formControlName="CharacterName" [appHighlightOnFocus]="'silver'" />
+    <input matInput type="text" formControlName="CharacterName" [appHighlightOnFocus]="'silver'" matTooltip="charatername "/>
   </mat-form-field>
 
 
   <mat-form-field appearance="outline" class="form-field" >
     <mat-label>power</mat-label>
-    <input matInput type="text" formControlName="power" [appHighlightOnFocus]="'silver'" />
+    <input matInput type="text" formControlName="power" [appHighlightOnFocus]="'silver'" matTooltip="power" />
   </mat-form-field>
 
 
   <mat-form-field appearance="outline" class="form-field" >
     <mat-label>weapons</mat-label>
-    <input matInput type="text" formControlName="weapons" [appHighlightOnFocus]="'silver'" />
+    <input matInput type="text" formControlName="weapons" [appHighlightOnFocus]="'silver'" matTooltip="weapons" />
   </mat-form-field>
 
-  <div class="form-group">
-    <label for="age">age</label>
-    <input type="number" id="age" formControlName="age" [appHighlightOnFocus]="'silver'"/>
-  </div>
+
   <mat-form-field appearance="outline" class="form-field" >
     <mat-label>age</mat-label>
-    <input matInput type="text" formControlName="age" [appHighlightOnFocus]="'silver'" />
+    <input matInput type="text" formControlName="age" [appHighlightOnFocus]="'silver'" matTooltip="power" />
   </mat-form-field>
 
   <mat-form-field appearance="outline" class="form-field" >
     <mat-label>iscanfly</mat-label>
-    <input matInput type="text" formControlName="iscanfly" [appHighlightOnFocus]="'silver'" />
+    <input matInput type="text" formControlName="iscanfly" [appHighlightOnFocus]="'silver'" matTooltip="enter yes or no" />
   </mat-form-field>
 
+  <div class="button-group">
   <button mat-raised-button color="primary" type="submit" >Submit</button>
+  </div>
+
 </form>

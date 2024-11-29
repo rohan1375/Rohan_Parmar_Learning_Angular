@@ -6,6 +6,7 @@ import {ActivatedRoute, Router} from "@angular/router";
 import {HighlightOnFocusDirective} from "../directives/highlight-on-focus.directive";
 import {MatInputModule} from "@angular/material/input";
 import {MatButtonModule} from "@angular/material/button";
+import {MatTooltipModule} from "@angular/material/tooltip";
 
 @Component({
   selector: 'app-modify-list-item',
@@ -14,7 +15,8 @@ import {MatButtonModule} from "@angular/material/button";
     ReactiveFormsModule,
     HighlightOnFocusDirective,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    MatTooltipModule
   ],
   templateUrl: './modify-list-item.component.html',
   styleUrl: './modify-list-item.component.css'
